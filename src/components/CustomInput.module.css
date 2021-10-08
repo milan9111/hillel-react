@@ -1,0 +1,40 @@
+.inputBox {
+    padding-bottom: 25px;
+}
+
+.input{
+    margin-right: 25px;
+    font-family: 'Overpass Mono', monospace;
+    font-weight: 800;
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    cursor: pointer;
+    text-align: center;
+}
+
+.input:focus {
+    border: 3px solid rgb(235, 11, 11);
+    transition: 0.3s;
+}
+
+.input::placeholder {
+    text-align: center;
+}
+
+.btn {
+    color: rgb(235, 11, 11);
+    font-family: 'Overpass Mono', monospace;
+    font-weight: 800;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: rgba(17, 17, 20);
+    background-color: rgb(235, 11, 11);
+    transition: 0.3s; 
+}
+ 

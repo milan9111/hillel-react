@@ -7,9 +7,11 @@ body {
     sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #242424;
+  background-color: rgb(163, 162, 162);
   font-family: 'Overpass Mono', monospace;
 }
+
+* {outline: 0 !important;}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

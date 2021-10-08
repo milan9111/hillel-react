@@ -1,0 +1,16 @@
+.mainBox {
+   text-align: center;
+   padding-top: 50px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 800;
+  padding-bottom: 25px;
+  color: rgba(17, 17, 20);
+}
+
+.title span {
+  margin-left: 5px;
+  color: rgb(235, 11, 11);
+}
