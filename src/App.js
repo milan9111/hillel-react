@@ -1,14 +1,12 @@
 import React from 'react';
 import './App.css';
-import Task from './components/Task';
+import ProductsContainer from './components/ProductsContainer';
+ 
  
 class App extends React.Component {
  render() {
    return(
-     <div className="container">
-        <Task/>
-     </div>
-    
+        <ProductsContainer />
    )
  }
 }
