@@ -1,14 +1,11 @@
 import React from 'react';
-import './App.css';
-import ProductsContainer from './components/ProductsContainer';
+import ContainerToDo from './components/ContainerToDo';
+
  
- 
-class App extends React.Component {
- render() {
-   return(
-        <ProductsContainer />
-   )
- }
+const App = () => {
+  return(
+    <ContainerToDo />
+  );
 }
  
 

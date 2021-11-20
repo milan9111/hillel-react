@@ -1,0 +1,193 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+}
+
+.header h2 {
+  padding-top: 50px;
+}
+
+.auth {
+  text-align: center;
+}
+
+.auth__name {
+  margin: 25px 0px;
+}
+
+.auth__input {
+  margin: 25px 0px;
+}
+
+.auth__input input {
+  cursor: pointer;
+  border: 3px solid transparent;
+  border-radius: 5px;
+  text-align: center;
+  background-color: white;
+}
+
+.auth__input input:focus {
+  border: 3px solid #0beb29;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.auth__button button {
+  color: #eb0b0b;
+  font-weight: 700;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 3px solid transparent;
+  cursor: pointer;
+}
+
+.auth__button button:hover {
+  color: #111114;
+  background-color: #0beb29;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.list {
+  text-align: center;
+}
+
+.list__user {
+  margin: 25px 0px;
+}
+
+.list__empty {
+  margin: 25px 0px;
+}
+
+.list__addTasks {
+  margin: 25px 0px 50px 0px;
+}
+
+.list__addTasks button {
+  color: #eb0b0b;
+  font-weight: 700;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 3px solid transparent;
+  cursor: pointer;
+}
+
+.list__addTasks button:hover {
+  color: #111114;
+  background-color: #0beb29;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.list__changeUser {
+  margin-top: 25px;
+}
+
+.list__changeUser button {
+  color: #fff;
+  font-weight: 700;
+  background-color: #2f23d1;
+  border-radius: 5px;
+  border: 3px solid transparent;
+  cursor: pointer;
+}
+
+.list__changeUser button:hover {
+  color: #111114;
+  background-color: #0beb29;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.list__content {
+  max-width: 600px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.list__count {
+  margin-right: 5px;
+  font-weight: 600;
+}
+
+.list__remove {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.list__check input {
+  cursor: pointer;
+}
+
+.task__input {
+  margin: 25px 0px;
+}
+
+.task__input input {
+  cursor: pointer;
+  border: 3px solid transparent;
+  border-radius: 5px;
+  text-align: center;
+  background-color: white;
+}
+
+.task__input input:focus {
+  border: 3px solid #0beb29;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.task__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.task__addButton {
+  margin-right: 15px;
+}
+
+.task__addButton button {
+  color: #eb0b0b;
+  font-weight: 700;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 3px solid transparent;
+  cursor: pointer;
+}
+
+.task__addButton button:hover {
+  color: #111114;
+  background-color: #0beb29;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.task__closeButton button {
+  color: #fff;
+  font-weight: 700;
+  background-color: #2f23d1;
+  border-radius: 5px;
+  border: 3px solid transparent;
+  cursor: pointer;
+}
+
+.task__closeButton button:hover {
+  color: #111114;
+  background-color: #0beb29;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
