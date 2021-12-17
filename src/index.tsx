@@ -6,9 +6,7 @@ import AppContainer from './App';
  
 
 ReactDOM.render(
-   <React.StrictMode>
-           <AppContainer />
-   </React.StrictMode>,
+        <AppContainer />,
    document.getElementById('root')
  );
  

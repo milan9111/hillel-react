@@ -1,8 +1,10 @@
 import React from "react";
 import './../styles/styles.css';
 import { Link, NavLink } from "react-router-dom";
+import { HeaderProps } from "../helpers/interfaces";
 
-const Header = ({ countTypesProductsInBasket, onSearchProducts }) => {
+
+const Header: React.FC<HeaderProps> = ({ countTypesProductsInBasket, onSearchProducts }) => {
     return(
         <header className="header">
              <div className="header__logo">

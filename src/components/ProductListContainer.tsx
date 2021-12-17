@@ -1,21 +1,23 @@
 import React, { useContext, useState } from "react";
 import ContextProduct from "../contexts/ContextProduct";
+import { ProductListContainerProps, ProductsType } from "../helpers/interfaces";
 import CustomModal from "./CustomModal";
 import ProductDetails from "./ProductDetails";
 import ProductList from "./ProductList";
 
 
-const ProductListContainer = ({ addProduct }) => {
-    const [show, setShow] = useState(false);
-    const [clickedProduct, setClickedProduct] = useState(null);
-    const dataProducts = useContext(ContextProduct);
 
-    const changeModal = () => {
+const ProductListContainer: React.FC<ProductListContainerProps> = ({ addProduct }) => {
+    const [show, setShow] = useState<any>(false);
+    const [clickedProduct, setClickedProduct] = useState<string | null>(null);
+    const dataProducts = useContext<Array<ProductsType>>(ContextProduct);
+
+    const changeModal = ():void => {
         setShow(!show)
     }
     
-    const selectedIdProduct = (event) => {
-         setClickedProduct(event.target.id);
+    const selectedIdProduct = (event: React.MouseEvent<HTMLButtonElement>):void => {
+         setClickedProduct(event.currentTarget.id);
          changeModal();
     }
 
@@ -25,7 +27,6 @@ const ProductListContainer = ({ addProduct }) => {
                                                                       image={item.image}           
                                                                       title={item.title} 
                                                                       price={item.price} 
-                                                                      description={item.description} 
                                                                       addProduct={addProduct}
                                                                       selectedIdProduct={selectedIdProduct}    
                                                                       />)

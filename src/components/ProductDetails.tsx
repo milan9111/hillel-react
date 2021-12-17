@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from "react";
 import { productsAPI } from "../api/api";
+import { ProductDetailsProps, ProductsType } from "../helpers/interfaces";
 import loader from "./../source/images/loader.gif";
 
 
-const ProductDetails = ({idProduct}) => {
-    const [product, setProduct] = useState(null);
+const ProductDetails: React.FC<ProductDetailsProps> = ({idProduct}) => {
+    const [product, setProduct] = useState<ProductsType | null>(null);
 
     useEffect(() => {
         productsAPI.getOneProduct(idProduct)
