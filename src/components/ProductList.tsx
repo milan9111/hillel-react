@@ -6,7 +6,7 @@ import { ProductListProps } from "../helpers/interfaces";
 const ProductList: React.FC<ProductListProps> = ({id, image, title, price, addProduct, selectedIdProduct}) => {
 
     let arrThisThingJSON = localStorage.getItem("productsInBasket");
-    let arrThisThing = arrThisThingJSON ? JSON.parse(arrThisThingJSON).filter((item:number) => item === id).length : 0;
+    let arrThisThing:number = arrThisThingJSON ? JSON.parse(arrThisThingJSON).filter((item:number) => item === id).length : 0;
     
     return(
         <div className="list__item">

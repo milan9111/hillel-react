@@ -50,3 +50,10 @@ export interface CustomModalProps {
 export interface ProductDetailsProps {
     idProduct: string | null;
 }
+
+
+export interface BasketContainerProps {
+    removeProduct: (event: React.MouseEvent<HTMLButtonElement>) => void;
+    removeOneItem: (event: React.MouseEvent<HTMLButtonElement>) => void;
+    addOneItem: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  }

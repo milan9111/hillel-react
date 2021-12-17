@@ -1,13 +1,17 @@
 import React, {useContext} from "react";
 import ContextProduct from "../contexts/ContextProduct";
 import Basket from "./Basket";
+import { ProductsType, BasketContainerProps } from "../helpers/interfaces";
 import { Link } from "react-router-dom";
 
-const BasketContainer = ({ removeProduct, removeOneItem, addOneItem }) => {
-    const typesProductsInBasket = Array.from(new Set(JSON.parse(localStorage.getItem("productsInBasket"))));
-    const dataProducts = useContext(ContextProduct);
-    const productsInBasket = [];
-    let totalSum = 0;
+
+
+const BasketContainer: React.FC<BasketContainerProps> = ({ removeProduct, removeOneItem, addOneItem }) => {
+    const typesProductsInBasketJSON = localStorage.getItem("productsInBasket");
+    const typesProductsInBasket:Array<number> = Array.from(new Set(typesProductsInBasketJSON ? JSON.parse(typesProductsInBasketJSON) : []));
+    const dataProducts = useContext<Array<ProductsType>>(ContextProduct);
+    const productsInBasket:Array<ProductsType> = [];
+    let totalSum:number = 0;
     
     dataProducts.forEach(element => {
         typesProductsInBasket.forEach((item) => {
@@ -19,7 +23,8 @@ const BasketContainer = ({ removeProduct, removeOneItem, addOneItem }) => {
 
     
     productsInBasket.forEach(element => {
-        JSON.parse(localStorage.getItem("productsInBasket")).forEach((item) => {
+        let productsInBasketJSON = localStorage.getItem("productsInBasket");
+        productsInBasketJSON && JSON.parse(productsInBasketJSON).forEach((item:number) => {
             if(element.id === item) {
                 totalSum += element.price
             }
