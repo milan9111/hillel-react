@@ -2,7 +2,9 @@ import React from "react";
 import './../styles/styles.css';
 
 
-const CustomModal = ({show, changeModal, children}) => {
+const CustomModal = ({show, 
+                      changeModal, 
+                      children}) => {
 
     return show && (
         <div className="modal">
@@ -10,7 +12,6 @@ const CustomModal = ({show, changeModal, children}) => {
                  <div className="modal__close">
                     <button onClick={changeModal}> X </button>
                  </div>
-                 
                  {children}
             </div>
         </div>

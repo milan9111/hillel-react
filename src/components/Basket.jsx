@@ -27,7 +27,7 @@ const Basket = ({id, image, title, price, removeProduct, removeOneItem, addOneIt
                  {(price * countSelectedItem).toFixed(2)} $
              </div>
              <div className="basket__remove-product">
-                 <button id={id} onClick={removeProduct}> x </button>
+                 <button><i className="fa fa-times" aria-hidden="true" onClick={removeProduct} id={id}></i></button>
              </div>
         </div>
     );

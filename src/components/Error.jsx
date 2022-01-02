@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import ContextTranslation from "../contexts/ContextTranslation";
+import ContextLang from "../contexts/ContextLang";
 
 
 const Error = () => {
+    const dataLang = useContext(ContextTranslation);
+    const lang = useContext(ContextLang);
     return(
         <div className="error">
-           Sorry, our store is down! Come visit us later!
+           {lang === 'en' ? dataLang.EN_TITLE_ERROR : dataLang.RU_TITLE_ERROR}
         </div>
     );
 }

@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
+import ContextTranslation from "../contexts/ContextTranslation";
+import ContextLang from "../contexts/ContextLang";
 
 
-const ProductList = ({id, image, title, price, addProduct, selectedIdProduct}) => {
-
+const ProductList = ({id, 
+                      image, 
+                      title, 
+                      price, 
+                      addProduct, 
+                      selectedIdProduct}) => {
+    const dataLang = useContext(ContextTranslation);
+    const lang = useContext(ContextLang);
     let arrThisThing = JSON.parse(localStorage.getItem("productsInBasket")).filter((item) => item === id).length;
     
     return(
@@ -17,7 +25,7 @@ const ProductList = ({id, image, title, price, addProduct, selectedIdProduct}) =
                  {price} $
              </div>
              <div className="list__add">
-                 <button id={id} onClick={addProduct}>add to cart</button><span> x {arrThisThing} items</span>
+                 <button id={id} onClick={addProduct}>{lang === 'en' ? dataLang.EN_ADD_TO_CART : dataLang.RU_ADD_TO_CART}</button><span> x {arrThisThing} {lang === 'en' ? dataLang.EN_ITEM : dataLang.RU_ITEM}</span>
              </div>
         </div>
     );

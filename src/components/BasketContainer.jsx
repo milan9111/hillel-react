@@ -1,13 +1,20 @@
 import React, {useContext} from "react";
 import ContextProduct from "../contexts/ContextProduct";
+import ContextTranslation from "../contexts/ContextTranslation";
+import ContextLang from "../contexts/ContextLang";
 import Basket from "./Basket";
 import { Link } from "react-router-dom";
 
-const BasketContainer = ({ removeProduct, removeOneItem, addOneItem }) => {
+const BasketContainer = ({ removeProduct, 
+                           removeOneItem, 
+                           addOneItem }) => {
     const typesProductsInBasket = Array.from(new Set(JSON.parse(localStorage.getItem("productsInBasket"))));
     const dataProducts = useContext(ContextProduct);
+    const dataLang = useContext(ContextTranslation);
+    const lang = useContext(ContextLang);
     const productsInBasket = [];
     let totalSum = 0;
+    
     
     dataProducts.forEach(element => {
         typesProductsInBasket.forEach((item) => {
@@ -42,19 +49,19 @@ const BasketContainer = ({ removeProduct, removeOneItem, addOneItem }) => {
                {showProductsInBasket}
              </div>
              
-             <div className="basket__totalsum">Total: {totalSum.toFixed(2)} $</div>
+             <div className="basket__totalsum">{lang === 'en' ? dataLang.EN_TOTAL : dataLang.RU_TOTAL}: {totalSum.toFixed(2)} $</div>
              <div className="basket__back">
-                <Link to="/"><button>Back</button></Link>   
+                <Link to="/"><button>{lang === 'en' ? dataLang.EN_BUTTON_BACK : dataLang.RU_BUTTON_BACK}</button></Link>   
              </div>
         </section>
     ) : (
         <section className="basket-empty">
           <div className="basket-empty__title">
-            There are no products in your cart. Go back and select product...
+             {lang === 'en' ? dataLang.EN_NO_PRODUCTS_IN_CART : dataLang.RU_NO_PRODUCTS_IN_CART}
           </div>
           <div className="basket-empty__back">
             <Link to="/">
-              <button>Back</button>
+              <button>{lang === 'en' ? dataLang.EN_BUTTON_BACK : dataLang.RU_BUTTON_BACK}</button>
             </Link>
           </div>
         </section>
